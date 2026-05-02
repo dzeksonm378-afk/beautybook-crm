@@ -1,5 +1,12 @@
 # Deploy Notes
 
+## Current production
+
+- Initial Vercel deploy: completed.
+- Production URL: https://beautybook-crm.vercel.app/
+- Supabase environment variables are configured in Vercel.
+- Keep `.env.local` out of git and never paste private credentials into docs.
+
 ## Target
 
 - Vercel for the Next.js app.
@@ -29,6 +36,8 @@
 - Check deployment logs.
 - Open the production URL.
 - Verify `/login` and `/admin` protection.
+
+Initial production deploy is completed. Keep these notes for future redeploys or environment checks.
 
 ## Production smoke
 

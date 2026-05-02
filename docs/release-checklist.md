@@ -31,8 +31,13 @@
 - Screenshots prepared.
 - Limitations documented.
 - Future improvements documented.
+- Production URL added to README.
 
 ## Final status
 
 - Stage 9.4 Final QA Smoke & MVP Lock passed.
-- Status: ready for portfolio review and optional deploy preparation.
+- GitHub push completed.
+- Vercel production deploy completed.
+- Production smoke completed.
+- README production URL added.
+- Status: ready for portfolio presentation.

@@ -1,5 +1,13 @@
 # BeautyBook CRM — Portfolio Case
 
+## Live Demo
+
+https://beautybook-crm.vercel.app/
+
+- Public website can be viewed freely.
+- CRM is protected by staff login.
+- No real client data is used.
+
 ## Problem
 
 A beauty salon needs a simple system to:
@@ -77,6 +85,8 @@ Implemented:
 - salon working hours validation;
 - salon settings;
 - mobile UX polish;
+- portfolio screenshots;
+- production deployment;
 - security and privacy documentation.
 
 ## Screenshots
@@ -131,4 +141,4 @@ Implemented:
 - Payments or prepayments.
 - Analytics charts.
 - Automated tests for appointment rules and permissions.
-- Production deployment.
+- Production hardening.

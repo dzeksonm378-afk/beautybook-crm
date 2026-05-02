@@ -22,6 +22,9 @@
 - Owner-only salon settings.
 - UI polish and mobile UX polish.
 - README and portfolio documentation.
+- Portfolio screenshots.
+- GitHub publication.
+- Production deploy.
 
 ## Verified Manually
 
@@ -45,7 +48,6 @@
 - No real master schedule.
 - No database-level conflict guard yet.
 - No automated tests yet.
-- Deployment is not configured yet.
 
 ## Not Implemented
 
@@ -61,8 +63,8 @@
 ## Ready For
 
 - portfolio review;
-- final QA;
-- deploy preparation.
+- portfolio presentation;
+- optional production hardening.
 
 ## Final QA Lock
 
@@ -76,3 +78,11 @@
 - mobile smoke: passed
 - profiles role constraint synced: passed
 - status: ready for portfolio review and optional deploy preparation
+
+## Production Status
+
+- Production deploy: completed
+- Production URL: https://beautybook-crm.vercel.app/
+- GitHub publication: completed
+- Portfolio screenshots: completed
+- Final status: ready for portfolio presentation

@@ -2,6 +2,14 @@
 
 BeautyBook CRM is a mini CRM and online booking website for a beauty salon. It combines a public salon website, staff-only CRM, client management, service catalog, master management, appointment scheduling, salon settings and lightweight analytics.
 
+## Live Demo
+
+Production demo: https://beautybook-crm.vercel.app/
+
+- Public website is available without login.
+- CRM area is staff-only.
+- Demo data is test-only and used for portfolio presentation.
+
 ## Overview
 
 BeautyBook CRM is built for small beauty salons that need one practical system for daily operations: keeping a client base, managing services and masters, creating appointments, preventing double-booking and seeing basic revenue signals.
@@ -22,6 +30,7 @@ This keeps booking fast for clients while keeping CRM data private and staff-onl
 - Public booking is currently a preview screen.
 - Staff CRM CRUD workflows are implemented and manually verified.
 - Mobile UX polish has been completed for the portfolio MVP.
+- Production deploy is live on Vercel.
 
 ## Preview
 
@@ -267,7 +276,6 @@ Never paste real keys, passwords, cookies, tokens or client data into documentat
 - No real master schedule.
 - No database-level appointment conflict guard yet.
 - No automated tests yet.
-- Deployment is not configured yet.
 
 ## Future Improvements
 
@@ -282,7 +290,7 @@ Never paste real keys, passwords, cookies, tokens or client data into documentat
 - Payments or prepayments.
 - Analytics charts.
 - Automated tests.
-- Production deploy.
+- Production hardening.
 
 ## Portfolio Notes
 
