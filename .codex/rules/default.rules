@@ -1,0 +1,86 @@
+# Mini Beauty CRM Codex project rules.
+# Rule intent is expressed with prefix_rule(command parts...).
+# Actions:
+# - forbidden: do not run.
+# - prompt: ask the user before running.
+
+forbidden prefix_rule("rm", "-rf")
+# matches: rm -rf .next
+# matches: rm -rf supabase
+
+prompt prefix_rule("git", "push")
+# matches: git push
+# matches: git push origin main
+
+prompt prefix_rule("git", "reset", "--hard")
+# matches: git reset --hard
+# matches: git reset --hard HEAD~1
+
+prompt prefix_rule("git", "clean")
+# matches: git clean -fd
+# matches: git clean -fdx
+
+prompt prefix_rule("npm", "install")
+# matches: npm install
+# matches: npm install @supabase/supabase-js
+
+prompt prefix_rule("pnpm", "add")
+# matches: pnpm add zod
+# matches: pnpm add react-hook-form
+
+prompt prefix_rule("yarn", "add")
+# matches: yarn add zod
+# matches: yarn add recharts
+
+prompt prefix_rule("bun", "add")
+# matches: bun add zod
+# matches: bun add @supabase/ssr
+
+prompt prefix_rule("npx", "shadcn", "add")
+# matches: npx shadcn add table
+# matches: npx shadcn add form dialog dropdown-menu
+
+prompt prefix_rule("supabase", "migration")
+# matches: supabase migration new create_clients
+# matches: supabase migration repair
+
+prompt prefix_rule("supabase", "db", "reset")
+# matches: supabase db reset
+
+prompt prefix_rule("supabase", "db", "push")
+# matches: supabase db push
+
+prompt prefix_rule("supabase", "db", "seed")
+# matches: supabase db seed
+
+prompt prefix_rule("psql")
+# matches: psql -f supabase/seed.sql
+
+prompt prefix_rule("vercel", "deploy")
+# matches: vercel deploy
+# matches: vercel deploy --prod
+
+prompt prefix_rule("vercel", "--prod")
+# matches: vercel --prod
+
+prompt prefix_rule("npm", "run", "deploy")
+# matches: npm run deploy
+
+prompt prefix_rule("pnpm", "deploy")
+# matches: pnpm deploy
+
+prompt prefix_rule("dotenv")
+# matches: dotenv set NEXT_PUBLIC_SUPABASE_URL
+
+prompt prefix_rule("supabase", "secrets")
+# matches: supabase secrets set
+
+prompt prefix_rule("vercel", "env")
+# matches: vercel env add
+# matches: vercel env pull
+
+prompt prefix_rule("env")
+# matches: env production command wrappers
+
+# Also prompt for any command that changes .env files, production configuration,
+# secrets, database imports/exports, seed imports or deployment state.

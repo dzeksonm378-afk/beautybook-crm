@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --color-graphite: #0d0d0c;
+  --color-porcelain: #f4efe7;
+  --color-champagne: #c8a96a;
+  --color-taupe: #b8a99a;
+  --color-lime: #d7ff4f;
+  --color-plum: #25131f;
+  --background: var(--color-porcelain);
+  --foreground: var(--color-graphite);
+  --font-system-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-system-mono:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+@theme inline {
+  --color-graphite: var(--color-graphite);
+  --color-porcelain: var(--color-porcelain);
+  --color-champagne: var(--color-champagne);
+  --color-taupe: var(--color-taupe);
+  --color-lime: var(--color-lime);
+  --color-plum: var(--color-plum);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-system-sans);
+  --font-mono: var(--font-system-mono);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-system-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-graphite);
+}
+
+a {
+  text-decoration-thickness: from-font;
+}
