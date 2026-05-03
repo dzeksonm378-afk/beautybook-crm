@@ -17,7 +17,7 @@ const steps = [
 export default function BookingPage() {
   return (
     <>
-      <PublicHeader />
+      <PublicHeader activePath="/booking" />
       <PageShell
         description="Клиентская запись будет работать без аккаунта: клиенту понадобится только имя и телефон. CRM-вход нужен только сотрудникам салона."
         eyebrow="онлайн-запись"

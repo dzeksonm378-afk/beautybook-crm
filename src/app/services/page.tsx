@@ -46,7 +46,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <PublicHeader />
+      <PublicHeader activePath="/services" />
       <PageShell
         description="Публичный каталог услуг помогает клиенту быстрее понять стоимость, длительность и следующий шаг к записи."
         eyebrow="public catalog"

@@ -32,7 +32,7 @@ const masters = [
 export default function MastersPage() {
   return (
     <>
-      <PublicHeader />
+      <PublicHeader activePath="/masters" />
       <PageShell
         description="Editorial grid мастеров: специализация, уровень и ближайшее окно без раскрытия приватных данных команды."
         eyebrow="masters"

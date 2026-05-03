@@ -1,34 +1,14 @@
 import Link from "next/link";
+import { Suspense } from "react";
 
+import { LoginFeedback } from "@/components/auth/LoginFeedback";
 import { loginAction } from "@/lib/auth/actions";
 import { PublicFooter } from "@/components/layout/PublicFooter";
 import { PublicHeader } from "@/components/layout/PublicHeader";
 import { PageShell } from "@/components/shared/PageShell";
 import { StatusBadge } from "@/components/shared/StatusBadge";
 
-const errorMessages: Record<string, string> = {
-  credentials: "Не удалось войти. Проверьте email и пароль.",
-  env: "Настройки Supabase не найдены. Проверьте .env.local.",
-  onboarding: "Не удалось подготовить профиль сотрудника. Обратитесь к владельцу салона.",
-  validation: "Проверьте email и пароль. Пароль должен быть не короче 8 символов.",
-};
-
-const reasonMessages: Record<string, string> = {
-  staff_only: "Войдите как сотрудник салона, чтобы открыть CRM.",
-};
-
-type LoginPageProps = {
-  searchParams?: Promise<{
-    error?: string;
-    reason?: string;
-  }>;
-};
-
-export default async function LoginPage({ searchParams }: LoginPageProps) {
-  const params = await searchParams;
-  const error = params?.error ? errorMessages[params.error] : null;
-  const reason = params?.reason ? reasonMessages[params.reason] : null;
-
+export default function LoginPage() {
   return (
     <>
       <PublicHeader />
@@ -43,17 +23,9 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             <StatusBadge tone="preview">только сотрудники</StatusBadge>
           </div>
 
-          {error ? (
-            <p className="mt-5 rounded-[20px] border border-plum/15 bg-plum/5 px-4 py-3 text-sm font-medium text-plum">
-              {error}
-            </p>
-          ) : null}
-
-          {reason ? (
-            <p className="mt-5 rounded-[20px] border border-champagne/25 bg-champagne/10 px-4 py-3 text-sm font-medium text-graphite">
-              {reason}
-            </p>
-          ) : null}
+          <Suspense fallback={null}>
+            <LoginFeedback />
+          </Suspense>
 
           <form action={loginAction} className="mt-6 space-y-4">
             <label className="block">

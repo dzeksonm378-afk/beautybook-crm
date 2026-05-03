@@ -7,7 +7,7 @@ import { PageShell } from "@/components/shared/PageShell";
 export default function ContactsPage() {
   return (
     <>
-      <PublicHeader />
+      <PublicHeader activePath="/contacts" />
       <PageShell
         description="Контакты салона и будущая точка входа для карты, мессенджеров и онлайн-записи."
         eyebrow="contacts"
