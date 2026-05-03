@@ -8,10 +8,10 @@ export function HeroSection() {
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
           <StatusBadge tone="gold">BeautyBook CRM</StatusBadge>
-          <h1 className="mt-7 max-w-4xl font-display text-5xl leading-[0.95] tracking-tight sm:text-7xl">
+          <h1 className="mt-7 max-w-4xl font-display text-4xl leading-[1.02] tracking-tight sm:text-7xl sm:leading-[0.95]">
             Не просто запись. Новый стандарт beauty-сервиса.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-porcelain/72">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-porcelain/74 sm:mt-7 sm:text-lg sm:leading-8">
             Онлайн-запись, мастера, услуги, клиенты и аналитика — в
             премиальном интерфейсе для beauty-бизнеса.
           </p>
@@ -23,10 +23,10 @@ export function HeroSection() {
               Записаться онлайн
             </Link>
             <Link
-              href="/dashboard"
+              href="/services"
               className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 px-6 text-sm font-bold text-porcelain transition hover:border-champagne/50 hover:text-champagne"
             >
-              Смотреть CRM
+              Посмотреть услуги
             </Link>
           </div>
         </div>

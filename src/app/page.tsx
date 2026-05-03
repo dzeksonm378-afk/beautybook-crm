@@ -4,6 +4,7 @@ import { FeaturedServices } from "@/components/home/FeaturedServices";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LiveSlots } from "@/components/home/LiveSlots";
 import { TrustBlock } from "@/components/home/TrustBlock";
+import { VisualResults } from "@/components/home/VisualResults";
 import { PublicFooter } from "@/components/layout/PublicFooter";
 import { PublicHeader } from "@/components/layout/PublicHeader";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <PublicHeader />
       <HeroSection />
       <BookingDock />
+      <VisualResults />
       <FeaturedServices />
       <FeaturedMasters />
       <LiveSlots />

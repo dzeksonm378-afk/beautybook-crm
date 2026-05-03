@@ -3,7 +3,7 @@ import Link from "next/link";
 const navigation = [
   { href: "/services", label: "Услуги" },
   { href: "/masters", label: "Мастера" },
-  { href: "/booking", label: "Онлайн-запись" },
+  { href: "/booking", label: "Онлайн-запись", primary: true },
   { href: "/contacts", label: "Контакты" },
 ];
 
@@ -24,7 +24,9 @@ export function PublicHeader() {
             <Link
               href={item.href}
               key={item.href}
-              className="transition hover:text-champagne"
+              className={`transition hover:text-champagne ${
+                item.primary ? "font-semibold text-champagne" : ""
+              }`}
             >
               {item.label}
             </Link>
@@ -32,10 +34,10 @@ export function PublicHeader() {
         </nav>
         <Link
           href="/login"
-          className="inline-flex h-8 shrink-0 items-center justify-center rounded-full border border-champagne/35 px-2.5 text-sm font-semibold text-champagne transition hover:bg-champagne hover:text-graphite sm:h-10 sm:px-4"
+          className="inline-flex h-8 shrink-0 items-center justify-center rounded-full border border-white/15 px-2.5 text-xs font-semibold text-porcelain/68 transition hover:border-champagne/45 hover:text-champagne sm:h-10 sm:px-4 sm:text-sm"
         >
           <span className="sm:hidden">CRM</span>
-          <span className="hidden sm:inline">Войти в CRM</span>
+          <span className="hidden sm:inline">Для сотрудников</span>
         </Link>
       </div>
       <nav className="mx-auto mt-2 grid max-w-6xl grid-cols-2 gap-1.5 text-xs text-porcelain/75 sm:mt-3 sm:gap-2 sm:text-sm md:hidden">
@@ -43,7 +45,11 @@ export function PublicHeader() {
           <Link
             href={item.href}
             key={item.href}
-            className="rounded-full border border-white/10 px-2 py-1.5 text-center sm:px-3 sm:py-2"
+            className={`rounded-full border px-2 py-1.5 text-center sm:px-3 sm:py-2 ${
+              item.primary
+                ? "border-champagne bg-champagne text-graphite"
+                : "border-white/10"
+            }`}
           >
             {item.label}
           </Link>
